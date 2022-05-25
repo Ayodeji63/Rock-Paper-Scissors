@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background:radial-gradient(134.34% 134.34% at 50% 0%,
+    #1f3c57 0%,
+    #132337 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 700px;
+    height: 150px;
+    border: 1px solid white;
+    margin-top: 50px;
+    border-radius: 15px;
+    /* padding: 30px; */
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 8px;
+    /* margin-top: 20px; */
+}
+
+.score p {
+    color: #2a45c2;
+    font-weight: bold;
+    line-height: 19px;
+    letter-spacing: 2px;
+}
+
+.score h1 {
+    font-size: 56px;
+    color: #565468;
+}
+
+.hands {
+    background-image: url(./assets/triangle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+    display: flex;
+    width: 476px;
+    height: 430px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.hands > div:hover {
+    transition: all 0.25s;
+}
+
+.hands > div:hover {
+    transform: translate3d(0px, -8px, 0px);
+}
+
+.hands .paper {
+    margin-right: 20px;
+}
+
+.hands .rock {
+    margin-left: 20px;
+}
+
+.contest {
+    margin-top: 30px;
+    width: 900px;
+    display: none;
+    align-items: center;
+}
+
+.contest > div {
+    flex: 1;
+}
+
+.contest img {
+    width: 275px;
+    height: 275px;
+}
+
+.contest h1 {
+    color: #fff;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contest .choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contest .refree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.refree h1 {
+    font-style: 46px;
+}
+
+.refree .newGame {
+    background-color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s;
+    color: hsl(229, 25%, 31%);
+}
+.newGame:hover {
+    background-color: bisque;
+    transform: translate3d(0px, -2px, 0px);
+}
+
+
+@media screen and (max-width: 977px) {
+    .contest {  
+        width: 700px;
+    }
+
+    .contest img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 477px) {
+    .score {
+        width: 100px;
+        height: 96px;
+    }
+
+    .header {
+        width: 400px;
+        padding: 10px 10px;
+        margin-top: 30px;
+    }
+
+    .hands .paper img,
+    .hands .rock img,
+    .hands .scissors img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .hands {
+        background-position: center center;
+        margin-top: 50px;
+    }
+
+    .contest {
+        width: 100%;
+    }
+
+    .contest img {
+        width: 120px;
+        height: 120px;
+    }
+    .contest h1 {
+        font-size: 20px;
+    }
+    .refree .newGame {
+        background-color: #fff;
+        padding: 10px 20px;
+    }
+
+    .title img {
+        width: 100px;
+        height: 70px;
+    }
+
+
+}
+
+@media screen and (max-width:390px) {
+    .header {
+        width: 300px;
+        padding: 5px 7px;
+        margin-top: 30px;
+    }
+
+    .title img {
+        width: 70px;
+        height: 50px;
+    }
+
+    .score {
+        width: 90px;
+        height: 70px;
+    }
+
+    .score h1 {
+        font-size: 36px;
+        color: #565468;
+    }
+
+    .contest {
+        width: 100%;
+    }
+
+    .contest img {
+        width: 120px;
+        height: 120px;
+    }
+    .contest h1 {
+        font-size: 20px;
+    }
+    .refree .newGame {
+        background-color: #fff;
+        padding: 10px 20px;
+    }
+}
